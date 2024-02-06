@@ -24,8 +24,6 @@ DigitalOut entryLight(D2);
 
 //=====[Declaration and initialization of private global variables]============
 
-static bool entryLightState = OFF;
-
 //=====[Declarations (prototypes) of private functions]========================
 
 //=====[Implementations of public functions]===================================
@@ -38,7 +36,6 @@ void entryLightInit()
 
 void entryLightState()
 {
-    entryLightState = entryLight;
 }
 
 void entryLightUpdate()
@@ -49,7 +46,6 @@ void entryLightUpdate()
     else {
         entryLight = OFF;
     }
-    entryLightState();
 }
 
 //=====[Implementations of private functions]==================================

@@ -19,6 +19,8 @@ AnalogIn ldrSensor(A2);
 
 //=====[Declaration and initialization of public global variables]=============
 
+static float ldrReading = 0.0;
+
 //=====[Declaration and initialization of private global variables]============
 
 //=====[Declarations (prototypes) of private functions]========================
@@ -35,6 +37,7 @@ void ldrUpdate()
 
 float ldrRead()
 {
-    return ldrSensor.read();
+    ldrReading = ldrSensor.read();
+    return ldrReading;
 }
 //=====[Implementations of private functions]==================================
